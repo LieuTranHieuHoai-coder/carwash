@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:CarWash.Vendors.Custom"
+             mc:Ignorable="d"
+             x:Class="CarWash.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#343355">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout BackgroundColor="#343355" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ContentView Padding="0,25,0,25" VerticalOptions="FillAndExpand">
+                        <Label Text="Brand Name" TextColor="#ffffff" FontSize="32"></Label>
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+            <controls:CustomFrame CornerRadius="30,30,0,0"
+                        BackgroundColor="#ffffff"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                                  Grid.Row="1"
+                                  HeightRequest="800"
+                        >
+                <ScrollView>
+                    <StackLayout Orientation="Vertical" Padding="10,0,10,0">
+                        <Label Text="Login" FontAttributes="Bold" TextColor="#333333" FontSize="Title"/>
+                        <Label Text="EMAIL ADDRESS / PHONE NO" 
+                               TextColor="#909090" 
+                               FontAttributes="Bold" 
+                               Padding="0,20,0,0" 
+                               FontSize="Subtitle"></Label>
+                        <StackLayout Orientation="Vertical">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="45"></RowDefinition>
+                               
+                                </Grid.RowDefinitions>
+                                <Entry Placeholder="email@gmail.com" 
+                                   Text="email@gmail.com"
+                                   TextColor="#d2d1d6"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   />
+                                <Image Margin="0,-10,0,0" Source="icon_about.png"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="1"
+                       HorizontalOptions="End">
+                                </Image>
+                            </Grid>
+                            
+                        </StackLayout>
+                        <Label Text="PASSWORD" TextColor="#909090" FontAttributes="Bold" Padding="0,10,10,0" FontSize="Subtitle"></Label>
+                        <StackLayout Orientation="Vertical">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="45"></RowDefinition>
+
+                                </Grid.RowDefinitions>
+                                <Entry Placeholder="password" 
+                                   Text="********"
+                                   TextColor="#d2d1d6"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   />
+                                <Image Margin="0,-10,0,0" Source="icon_about.png"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="1"
+                       HorizontalOptions="End">
+                                </Image>
+                            </Grid>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                            <Label Text="Forget your password?"
+                               
+                               TextColor="#333333" 
+                               FontAttributes="Bold" 
+                               Padding="0,0,0,0" 
+                               FontSize="Subtitle"></Label>
+                        </StackLayout>
+                        <Frame Padding="0"
+                                   
+                                   BackgroundColor="#ea5d65"
+                                   CornerRadius="8"
+                                   >
+                            <StackLayout Orientation="Vertical" Padding="10,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="45"></RowDefinition>
+
+                                    </Grid.RowDefinitions>
+                                    <Label  
+                                       VerticalOptions="Center"
+                                       Text="Login"
+                                       TextColor="#ffffff"
+                                       FontSize="Subtitle"
+                                       FontAttributes="Bold"
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                   />
+                                    <Image VerticalOptions="Center" Source="icon_about.png"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="1"
+                       HorizontalOptions="End">
+                                    </Image>
+                                </Grid>
+
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Grid >
+                                <Grid.RowDefinitions></Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label  
+                                       
+                                       Text="New Customer ?"
+                                       TextColor="#909090"
+                                       FontSize="Subtitle"
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="1"
+                                   />
+
+                                <Label TextColor="#000000"
+                                       FontSize="Subtitle"
+                                       FontAttributes="Bold"
+                                       Grid.Row="0"
+                                       Grid.Column="1"
+                                       Grid.ColumnSpan="1">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Create Account"
+                                                  TextColor="Blue"
+                                                  TextDecorations="None">
+                                                <Span.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://docs.microsoft.com/xamarin/" />
+                                                </Span.GestureRecognizers>
+                                            </Span>
+                                            
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                               
+                               
+                            </Grid>
+                            
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label Text="or Sign in with social media" ></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Frame CornerRadius="50" Padding="0" WidthRequest="45">
+                                <Image Source="google.jpg"></Image>
+                            </Frame>
+                            <Frame CornerRadius="50" Padding="0" WidthRequest="45">
+                                <Image Source="facebookicon.png"></Image>
+                            </Frame>
+                            <Frame CornerRadius="50" Padding="0" WidthRequest="45">
+                                <Image Source="twitter.jpg"></Image>
+                            </Frame>
+                        </StackLayout>
+                        
+                        <Image Source="car.png"></Image>
+                    </StackLayout>
+                </ScrollView>
+            </controls:CustomFrame>
+            
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
